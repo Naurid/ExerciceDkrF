@@ -10,6 +10,7 @@ body {
     background-color: #f7f7f7; /* Light background for a clean, airy look */
     color: #333; /* Darker text for better readability */
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     min-height: 100vh; /* Full viewport height */
@@ -35,11 +36,6 @@ body {
 
 /* Button styles */
 .toggle-btn {
-    background-color: transparent; /* Transparent background */
-    border: none;
-    width: 100%;
-    text-align: center;
-    padding: 0;
     cursor: pointer;
 }
 
@@ -91,7 +87,6 @@ p {
 
 /* Show list when the visible class is added */
 .hidden-list.visible {
-    max-height: 300px; /* Set a max-height for the sliding animation */
     opacity: 1;
 }
 
