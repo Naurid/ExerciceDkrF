@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Subtle light gray background */
+    background-color: #f7f7f7; /* Light background for a clean, airy look */
     color: #333; /* Darker text for better readability */
     display: flex;
     justify-content: center; /* Center content horizontally */
@@ -17,52 +17,51 @@ body {
     text-align: center; /* Center text in body */
 }
 
-h1 {
-    font-size: 3rem; /* Larger, cleaner heading */
-    color: #333; /* Simple dark color for text */
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-p {
-    font-size: 1.1rem; /* Slightly smaller text for a minimalistic feel */
-    color: #666; /* Softer text color */
-    line-height: 1.5;
-    font-style: italic;
-    margin-top: 20px;
-}
-
-/* Container for content */
+/* Button container style */
 .container {
-    width: 100%;
-    max-width: 600px; /* Reduce width for a more compact, sleek design */
-    padding: 40px;
-    background-color: #fff; /* White background for minimalism */
-    border-radius: 12px; /* Rounded corners for a smooth look */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Subtle, elegant shadow */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+    overflow: hidden; /* Ensures list doesn’t overflow outside the container */
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Makes the button interactive */
 }
 
 /* Button styles */
 .toggle-btn {
-    background-color: #007BFF;
-    color: white;
+    background-color: transparent; /* Transparent background */
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 0;
     cursor: pointer;
-    border-radius: 8px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
 }
 
-.toggle-btn:hover {
-    background-color: #0056b3;
+/* Title and paragraph inside button */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Hover effect for the container button */
+.container:hover {
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for the button hover effect */
 }
 
 /* Hidden list initially */
@@ -76,32 +75,27 @@ p {
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-/* List items styling */
+/* List item style */
 .hidden-list li {
-    font-size: 1.1rem;
-    color: #333;
-    padding: 8px;
+    font-size: 1rem;
+    color: #444;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
     text-align: left;
+    transition: transform 0.3s ease;
 }
 
-/* Show list when visible class is added */
+.hidden-list li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+/* Show list when the visible class is added */
 .hidden-list.visible {
-    max-height: 200px; /* Set a max-height for the animation */
+    max-height: 300px; /* Set a max-height for the sliding animation */
     opacity: 1;
 }
 
-/* Animation for smooth fade-in effect */
-h1 {
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Button container hover effect */
+.container:hover {
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
 }
