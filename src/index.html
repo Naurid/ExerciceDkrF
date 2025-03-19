@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="be-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <title>DevSecOps en .Net</title>
+</head>
+<body>
+    <button class="toggle-btn container">
+        <h1>DevSecOps en .Net</h1>
+
+        <p>Une formation composée d'une bande joyeux lurons avides d'apprendre tout ce qu'il y a a savoir sur .Net :]</p>
+    </button>
+    <ul class="hidden-list">
+        <li>Kevin-May</li>
+        <li>Etienne</li>
+        <li>Gabor</li>
+        <li>Olivier</li>
+        <li>Dylan</li>
+        <li>Eric</li>
+        <li>Anthony</li>
+        <li>Arnaud</li>
+        <li>Maxime</li>
+        <li>Istvan</li>
+        <li>Aleksandr</li>
+        <li>Vincent (parti trop tot et a jamais dans nos coeurs *sniff sniff*)</li>
+    </ul>
+    <script>
+        // JavaScript to toggle the visibility of the list
+        const button = document.querySelector('.toggle-btn');
+        const list = document.querySelector('.hidden-list');
+        
+        button.addEventListener('click', () => {
+            list.classList.toggle('visible');
+        });
+    </script>
+</body>
+</html>

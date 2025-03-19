@@ -48,6 +48,48 @@ p {
     align-items: center;
 }
 
+/* Button styles */
+.toggle-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hidden list initially */
+.hidden-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* List items styling */
+.hidden-list li {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Show list when visible class is added */
+.hidden-list.visible {
+    max-height: 200px; /* Set a max-height for the animation */
+    opacity: 1;
+}
+
 /* Animation for smooth fade-in effect */
 h1 {
     animation: fadeIn 1s ease-out;
